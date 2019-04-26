@@ -23,6 +23,7 @@ namespace Simple_Audio_Player
         public MainWindow()
         {
             InitializeComponent();
+            int i = 0;
         }
     }
 }
