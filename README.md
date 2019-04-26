@@ -1,4 +1,4 @@
-# SimpleAudioPlayer  
+# SimpleAudioPlayer
 
 ## Минимальные требования к приложению
   <li> Работа с аудио.
