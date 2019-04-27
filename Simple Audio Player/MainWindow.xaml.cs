@@ -24,5 +24,40 @@ namespace Simple_Audio_Player
         {
             InitializeComponent();
         }
-    }
+
+		private void btPlay_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void btStop_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void btPause_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void slVolume_Changed(object sender, RoutedPropertyChangedEventArgs<double> e)
+		{
+
+		}
+
+		private void slBalance_Changed(object sender, RoutedPropertyChangedEventArgs<double> e)
+		{
+
+		}
+
+		private void slSpeed_Changed(object sender, RoutedPropertyChangedEventArgs<double> e)
+		{
+
+		}
+
+		private void btOpen_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+	}
 }
