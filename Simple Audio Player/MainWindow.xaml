@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Simple_Audio_Player"
         mc:Ignorable="d"
-        Title="SimpleAudioPlayer" Height="580" Width="355">
+        Title="SimpleAudioPlayer" Height="580" Width="355" ResizeMode="NoResize">
     <Grid HorizontalAlignment="Left" Height="550" Margin="0,0,0,-1" VerticalAlignment="Top" Width="345">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -17,7 +17,11 @@
         <Separator HorizontalAlignment="Left" Height="100" Margin="0,158,-3,0" VerticalAlignment="Top" Width="348"/>
         <Separator HorizontalAlignment="Left" Height="100" Margin="0,233,-3,0" VerticalAlignment="Top" Width="348"/>
         <Separator HorizontalAlignment="Left" Height="100" Margin="0,241,-3,0" VerticalAlignment="Top" Width="348"/>
-        <Label x:Name="lbTitle" Content="songName.mp3" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Height="31" Width="235" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="lbTitle" Content="songName.mp3" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top" Height="31" Width="235" FontSize="14" FontWeight="Bold">
+            <Label.ToolTip>
+                <ToolTip x:Name="ttTitle"/>
+            </Label.ToolTip>
+        </Label>
         <Image HorizontalAlignment="Left" Height="25" Margin="291,20,0,0" VerticalAlignment="Top" Width="25" Source="pack://siteoforigin:,,,/Resources/1494593824160726806.png"/>
         <Button x:Name="btPlay" HorizontalAlignment="Left" Margin="110,125,0,0" VerticalAlignment="Top" Width="55" Height="55" Click="btPlay_Click" Background="{x:Null}" BorderBrush="{x:Null}">
             <Image Height="55" Width="55" Source="pack://siteoforigin:,,,/Resources/play.jpg"/>
@@ -28,12 +32,22 @@
         <Button x:Name="btPause" HorizontalAlignment="Left" Margin="175,145,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="btPause_Click" Background="{x:Null}" BorderBrush="{x:Null}">
             <Image Height="35" Width="35" Source="pack://siteoforigin:,,,/Resources/pause.jpg"/>
         </Button>
-        <Slider x:Name="slVolume" HorizontalAlignment="Left" Margin="291,51,0,0" VerticalAlignment="Top" Orientation="Vertical" Height="129" TickPlacement="BottomRight" Background="{x:Null}" Maximum="100" TickFrequency="25" Value="20" BorderBrush="{x:Null}" Foreground="#FFA8A8A8" ValueChanged="slVolume_Changed"/>
+        <Slider x:Name="slVolume" HorizontalAlignment="Left" Margin="291,51,0,0" VerticalAlignment="Top" Orientation="Vertical" Height="129" TickPlacement="BottomRight" Background="{x:Null}" Maximum="100" TickFrequency="50" Value="20" BorderBrush="{x:Null}" Foreground="#FF4F4F4F" ValueChanged="slVolume_Changed" AutoToolTipPlacement="TopLeft" RenderTransformOrigin="0.5,0.5"></Slider>
         <Label Content="Balance" Margin="63,209,0,0" VerticalAlignment="Top" Width="52" Height="27" HorizontalAlignment="Left"/>
         <Label Content="Speed" HorizontalAlignment="Left" Margin="240,209,0,0" VerticalAlignment="Top" Height="27" Width="44"/>
-        <Slider x:Name="slBalance" HorizontalAlignment="Left" Margin="20,250,0,0" VerticalAlignment="Top" Width="145" Maximum="100" Minimum="-100" TickPlacement="TopLeft" TickFrequency="100" BorderBrush="White" Foreground="#FF4F4F4F" ValueChanged="slBalance_Changed"/>
-        <Slider x:Name="slSpeed"  HorizontalAlignment="Left" Margin="190,250,0,0" VerticalAlignment="Top" Width="145" Maximum="2" Minimum="0.25" TickPlacement="TopLeft" Value="1" TickFrequency="0" Foreground="#FF5F5F5F" ValueChanged="slSpeed_Changed"/>
-        <Button x:Name="btOpen" Content="Open..." HorizontalAlignment="Left" Margin="135,313,0,0" VerticalAlignment="Top" Width="75" Click="btOpen_Click"/>
+        <Slider x:Name="slBalance" HorizontalAlignment="Left" Margin="20,250,0,0" VerticalAlignment="Top" Width="145" Maximum="100" Minimum="-100" TickPlacement="TopLeft" BorderBrush="White" Foreground="#FF4F4F4F" ValueChanged="slBalance_Changed" AutoToolTipPlacement="TopLeft" TickFrequency="100"/>
+        <Slider x:Name="slSpeed"  HorizontalAlignment="Left" Margin="190,250,0,0" VerticalAlignment="Top" Width="145" Maximum="200" Minimum="25" TickPlacement="TopLeft" Value="100" TickFrequency="25" Foreground="#FF4F4F4F" ValueChanged="slSpeed_Changed" IsSnapToTickEnabled="True" AutoToolTipPlacement="TopLeft" SmallChange="25" LargeChange="25"/>
+        <Label Content="L" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Height="26" Width="17"/>
+        <Label Content="R" HorizontalAlignment="Left" Margin="160,250,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btCreat" Content="Create New Playlist" HorizontalAlignment="Left" Margin="10,298,0,0" VerticalAlignment="Top" Width="115" Click="btCreat_Click"/>
+        <Button x:Name="btAdd" Content="Add" HorizontalAlignment="Left" Margin="147,298,0,0" VerticalAlignment="Top" Width="75" Click="btAdd_Click"/>
+        <ListView HorizontalAlignment="Left" Height="222" Margin="0,323,0,0" VerticalAlignment="Top" Width="345">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Playlist"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 
 </Window>

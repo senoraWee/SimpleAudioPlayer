@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Wadd" Height="300" Width="300">
     <Grid>
-        
+        <Label Content="Add this track to playlist?" HorizontalAlignment="Left" Margin="64,60,0,0" VerticalAlignment="Top" Width="178" FontSize="14"/>
+        <Button x:Name="btDoNotAdd" Content="No" HorizontalAlignment="Left" Margin="31,193,0,0" VerticalAlignment="Top" Width="75" Click="btDoNotAdd_Click"/>
+        <Button x:Name="btAdd" Content="Yes" HorizontalAlignment="Left" Margin="188,193,0,0" VerticalAlignment="Top" Width="75" Click="btAdd_Click"/>
+
     </Grid>
 </Window>

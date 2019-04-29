@@ -60,5 +60,15 @@ namespace Simple_Audio_Player
 		{
 
 		}
+
+		private void btCreat_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void btAdd_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

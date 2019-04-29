@@ -130,4 +130,7 @@
   <data name="_1494593824160726806" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1494593824160726806.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icons8_Windows_8_Music_Note_Music" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons8-Windows-8-Music-Note-Music.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

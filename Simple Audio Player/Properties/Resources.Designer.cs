@@ -71,6 +71,16 @@ namespace Simple_Audio_Player.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon Icons8_Windows_8_Music_Note_Music {
+            get {
+                object obj = ResourceManager.GetObject("Icons8_Windows_8_Music_Note_Music", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap pause {
